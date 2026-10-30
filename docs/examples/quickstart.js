@@ -1,6 +1,6 @@
 `examples/quickstart.js`
 
-This example connects to the Collaborative Knowledge Board API, joins a board's real-time event stream, and moves a card using its current version.
+// This example connects to the Collaborative Knowledge Board API, joins a board's real-time event stream, and moves a card using its current version.
 
 **Dependencies**
 
@@ -8,7 +8,7 @@ This example connects to the Collaborative Knowledge Board API, joins a board's 
 npm install socket.io-client
 ```
 
-**Environment variables**
+// **Environment variables**
 
 ```bash
 API_TOKEN="your_jwt_token"
@@ -178,21 +178,21 @@ main().catch((error) => {
 });
 ```
 
-### Run the example
+// ### Run the example
 
-Save the file as `examples/quickstart.js`, configure the environment variables, and execute:
+// Save the file as `examples/quickstart.js`, configure the environment variables, and execute:
 
 ```bash
 node examples/quickstart.js
 ```
 
-**Expected workflow:**
+// **Expected workflow:**
 
-1. The client connects to the real-time server using the JWT.
-2. The client emits `board.join` with the selected board ID.
-3. You press Enter to submit the card move.
-4. The API processes the move using the supplied card version.
-5. If successful, the updated card is displayed.
-6. The client listens for `card.moved` and other board events.
+// 1. The client connects to the real-time server using the JWT.
+// 2. The client emits `board.join` with the selected board ID.
+// 3. You press Enter to submit the card move.
+// 4. The API processes the move using the supplied card version.
+// 5. If successful, the updated card is displayed.
+// 6. The client listens for `card.moved` and other board events.
 
-**Implementation note:** The engineering notes do not define a `board.join` acknowledgement or event-delivery guarantee. The example therefore demonstrates the documented connection and subscription request, but successful subscription before the REST operation must be verified against the server implementation.
+// **Implementation note:** The engineering notes do not define a `board.join` acknowledgement or event-delivery guarantee. The example therefore demonstrates the documented connection and subscription request, but successful subscription before the REST operation must be verified against the server implementation.
