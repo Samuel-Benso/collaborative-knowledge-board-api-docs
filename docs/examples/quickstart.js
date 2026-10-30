@@ -1,27 +1,3 @@
-`examples/quickstart.js`
-
-// This example connects to the Collaborative Knowledge Board API, joins a board's real-time event stream, and moves a card using its current version.
-
-**Dependencies**
-
-```bash
-npm install socket.io-client
-```
-
-// **Environment variables**
-
-```bash
-API_TOKEN="your_jwt_token"
-BOARD_ID="b_9"
-CARD_ID="c_101"
-COLUMN_ID="col_3"
-POSITION=0
-VERSION=4
-```
-
-**Code**
-
-```javascript
 import { io } from "socket.io-client";
 import readline from "node:readline/promises";
 import { stdin as input, stdout as output } from "node:process";
@@ -176,7 +152,6 @@ main().catch((error) => {
   console.error("\nError:", error.message);
   process.exitCode = 1;
 });
-```
 
 // ### Run the example
 
